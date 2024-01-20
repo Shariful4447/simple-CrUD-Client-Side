@@ -20,8 +20,13 @@ function App() {
     .then(res => res.json())
     .then(data => {
       console.log(data);
-    })
-  }
+      if(data.insertedId){
+        alert('Inserted successfully');
+        form.reset();
+      
+    }
+  })
+}
   
 
   return (
@@ -37,5 +42,6 @@ function App() {
     </>
   )
 }
+
 
 export default App
